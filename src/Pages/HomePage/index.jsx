@@ -11,6 +11,11 @@ const HomePage = () => {
   const [alturaTri, setAlturaTri] = useState('');
   const [areaTriangulo, setAreaTriangulo] = useState(null);
 
+  // Estado para rectángulo
+  const [baseRec, setBaseRec] = useState('');
+  const [alturaRec, setAlturaRec] = useState('');
+  const [areaRectangulo, setAreaRectangulo] = useState(null);
+
   const soloNumeros = (valor) => /^\d*$/.test(valor);
 
   const calcularAreaCuadrado = () => {
@@ -22,6 +27,12 @@ const HomePage = () => {
   const calcularAreaTriangulo = () => {
     if (baseTri && alturaTri) {
       setAreaTriangulo((Number(baseTri) * Number(alturaTri)) / 2);
+    }
+  };
+
+  const calcularAreaRectangulo = () => {
+    if (baseRec && alturaRec) {
+      setAreaRectangulo(Number(baseRec) * Number(alturaRec));
     }
   };
 
@@ -59,9 +70,33 @@ const HomePage = () => {
             value={alturaTri}
             onChange={(e) => soloNumeros(e.target.value) && setAlturaTri(e.target.value)}
           />
-          <button onClick={calcularAreaTriangulo}>Calcular</button>
         </td>
+        <button onClick={calcularAreaTriangulo}>Calcular</button>
         {areaTriangulo !== null && <p className="bold">Área: {areaTriangulo} u²</p>}
+      </div>
+
+      <div className="card">
+        <h2>Área del Rectángulo</h2>
+        <td>
+          <p>Base</p>
+          <input
+            type="text"
+            placeholder="Base"
+            value={baseRec}
+            onChange={(e) => soloNumeros(e.target.value) && setBaseRec(e.target.value)}
+          />
+        </td>
+        <td>
+          <p>Altura</p>
+          <input
+            type="text"
+            placeholder="Altura"
+            value={alturaRec}
+            onChange={(e) => soloNumeros(e.target.value) && setAlturaRec(e.target.value)}
+          />
+        </td>
+        <button onClick={calcularAreaRectangulo}>Calcular</button>
+        {areaRectangulo !== null && <p className="bold">Área: {areaRectangulo} u²</p>}
       </div>
     </div>
   );

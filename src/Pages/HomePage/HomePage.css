@@ -1,0 +1,44 @@
+.home-container {
+  background-color: #f3e8ff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.title {
+  color: #6b21a8;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #a855f7;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  width: 200px;
+}
+
+.calc-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #a855f7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calc-button:hover {
+  background-color: #9333ea;
+}
+
+.result-text {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #4c1d95;
+}

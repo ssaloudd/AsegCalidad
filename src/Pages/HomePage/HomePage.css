@@ -6,11 +6,42 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .title {
   color: #6b21a8;
   margin-bottom: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+input {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  width: 150px;
+}
+
+button {
+  background-color: #ce93d8;
+  color: #4a148c;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ba68c8;
 }
 
 .input-box {
@@ -41,4 +72,9 @@
   margin-top: 20px;
   font-size: 18px;
   color: #4c1d95;
+}
+
+.bold {
+  font-weight: bold;
+  margin-top: 0.5rem;
 }
